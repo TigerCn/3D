@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>构建立方体2</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	html{
+		background-color: #eee;
+	}
+	div{
+		width:400px;
+		height:400px;
+		margin:100px auto;
+		perspective:1600px;
+		cursor:pointer;
+	}
+	ul{
+		width:400px;
+		height:400px;
+		list-style:none;
+		position: relative;
+		transform-style:preserve-3d;
+		transition:all 10s ease 0s;
+	}
+	ul li{
+		width:400px;
+		height:400px;
+		line-height: 400px;
+		font-size: 30px;
+		font-weight: bold;
+		color:white;
+		text-align: center;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	/*正面*/
+	ul li:nth-of-type(1){
+		background: url(images/46/1.jpg);
+		transform:translateZ(200px);
+		z-index:1;
+	}
+	/*背面*/
+	ul li:nth-of-type(2){
+		background: url(images/46/2.jpg);
+		transform:rotateX(180deg) translateZ(200px);
+	}
+	/*上面*/
+	ul li:nth-of-type(3){
+		background: url(images/46/3.jpg);
+		transform:rotateX(90deg) translateZ(200px);
+	}
+	/*下面*/
+	ul li:nth-of-type(4){
+		background: url(images/46/4.jpg);
+		transform:rotateX(90deg) translateZ(-200px);
+	}
+	/*左面*/
+	ul li:nth-of-type(5){
+		background: url(images/46/5.jpg);
+		transform:rotateY(90deg) translateZ(-200px);
+	}
+	/*右面*/
+	ul li:nth-of-type(6){
+		background: url(images/46/6.jpg);
+		transform:rotateY(90deg) translateZ(200px);
+	}
+	div:hover ul{
+		transform:rotateX(3600deg) rotateY(360deg) rotateZ(360deg);
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>正面</li>
+			<li>背面</li>
+			<li>上面</li>
+			<li>下面</li>
+			<li>左面</li>
+			<li>右面</li>
+		</ul>
+	</div>
+</body>
+</html>
